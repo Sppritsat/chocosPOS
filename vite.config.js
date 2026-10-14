@@ -9,7 +9,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: { globPatterns: ['**/*.{js,css,html,svg,png,ico}'] },
       manifest: {
-        name: 'POS Chocos', short_name: 'Chocos', display: 'standalone',
+        name: 'ChocoPOS', short_name: 'ChocoPOS', display: 'standalone',
         orientation: 'landscape', background_color: '#3b2314', theme_color: '#3b2314',
         icons: [
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
