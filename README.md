@@ -7,7 +7,7 @@ ChocoPOS es una aplicación web progresiva (PWA) de alto rendimiento diseñada p
 ## 🛠️ Stack Tecnológico
 
 * **Frontend Framework:** React 18+ con Vite (JavaScript / JSX)
-* **Estilos & UI:** TailwindCSS + Lucide React (Íconos *touch-friendly*)
+* **Estilos & UI:** TailwindCSS
 * **Persistencia Local (Offline-First):** IndexedDB encapsulado con **Dexie.js**
 * **Gestión de Estado & Rutas:** Zustand · React Router
 * **PWA & Impresión:** `vite-plugin-pwa` · Web Bluetooth API (modo simulado por defecto) / CSS Print Media
@@ -40,7 +40,7 @@ ChocoPOS es una aplicación web progresiva (PWA) de alto rendimiento diseñada p
 ```bash
 # 1. Clonar el repositorio
 git clone [https://github.com/Sppritsat/chocosPOS.git](https://github.com/Sppritsat/chocosPOS.git)
-cd chocosPOS
+cd chocosPOS/pos-chocos/pos-chocos   # aquí está el package.json
 
 # 2. Instalar dependencias
 npm install
@@ -74,7 +74,7 @@ chocopos/
 ├── src/
 │   ├── db/                    # [Dev 1] db.js · seed.js · repositories.js (Listo)
 │   ├── store/                 # [Dev 1] useCartStore · useSessionStore (Listo)
-│   ├── hooks/                 # [Dev 1] useCajaAbierta (Listo)
+│   ├── hooks/                 # [Dev 1] useSesionActiva (Listo)
 │   ├── utils/                 
 │   │   ├── format.js          # [Dev 1] Formateadores generales
 │   │   ├── cambio.js          # [Dev 3] Lógica matemática para cálculo de cambio
