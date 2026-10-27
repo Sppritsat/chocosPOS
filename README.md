@@ -108,14 +108,7 @@ chocopos/
 | --- | --- | --- | --- |
 | **Dev 1: José Emilio** | Core & Base de Datos | `src/db/**`, `src/store/**`, `src/hooks/**`, `src/App.jsx`, `src/main.jsx`, `src/components/common/**` | ✅ Dexie estable, repositorios, stores, PWA offline, layout base. |
 | **Dev 2: Jimena** | POS & Impresión | `src/pages/PosPage.jsx`, `src/components/pos/**`, `src/utils/printer/**` | Armado de bebidas, carrito de compras, etiquetas (simulada + Bluetooth). |
-| **Dev 3: Karlo** | Cobro & Caja | `src/pages/CajaPage.jsx`, `src/components/cobro/**`, `src/utils/cambio.js` | Apertura de caja, cobro con cálculo de cambio, arqueo y ticket de cierre. |
-| **Dev 4: César** | Admin & Dashboard | `src/pages/AdminPage.jsx`, `src/components/admin/**`, `src/utils/stats.js` | Autenticación por PIN, CRUD de catálogo y dashboard de ventas diarias/cliente. |
 
-*Si necesitas modificar un archivo fuera de tu alcance asignado (esquema, store o repositorio), abre un issue o un Pull Request pequeño dirigido a José Emilio (Dev 1).*
-
----
-
-## 🔀 Git Workflow
 
 ## 💵 Módulo de Caja — Dev 3: Karlo
 
@@ -144,6 +137,13 @@ Este módulo contempla las funcionalidades necesarias para administrar las opera
 
 **Estado:** La documentación describe el alcance esperado del módulo. La implementación y las pruebas deben confirmarse antes de declarar las funcionalidades como terminadas.
 
+| **Dev 4: César** | Admin & Dashboard | `src/pages/AdminPage.jsx`, `src/components/admin/**`, `src/utils/stats.js` | Autenticación por PIN, CRUD de catálogo y dashboard de ventas diarias/cliente. |
+
+*Si necesitas modificar un archivo fuera de tu alcance asignado (esquema, store o repositorio), abre un issue o un Pull Request pequeño dirigido a José Emilio (Dev 1).*
+
+---
+
+## 🔀 Git Workflow
 Para mantener la rama `main` estable y limpia, **está strictly prohibido hacer commits directos a `main**`.
 
 ### Convención de Ramas:
