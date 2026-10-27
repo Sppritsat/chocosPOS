@@ -117,6 +117,33 @@ chocopos/
 
 ## 🔀 Git Workflow
 
+## 💵 Módulo de Caja — Dev 3: Karlo
+
+Este módulo contempla las funcionalidades necesarias para administrar las operaciones de caja durante la jornada de trabajo de la chocolatería.
+
+### CHOCO-6: Apertura de caja
+- **Componente:** `src/components/cobro/AperturaCaja.jsx`
+- **Objetivo:** Registrar el fondo inicial de efectivo disponible al comenzar la jornada.
+- **Proceso esperado:** Capturar el monto inicial, registrar la apertura mediante `sesionesRepo.abrir()` y actualizar la sesión activa mediante `useSessionStore.cargarSesion()`.
+
+### CHOCO-7: Cobro y cálculo de cambio
+- **Componentes:** `src/components/cobro/CobroModal.jsx` y `src/utils/cambio.js`
+- **Objetivo:** Gestionar el cobro de los pedidos y calcular el cambio correspondiente.
+- **Proceso esperado:** Obtener el total de la compra, registrar el importe recibido y calcular el cambio cuando el pago sea en efectivo.
+
+### CHOCO-8: Arqueo y cierre de caja
+- **Componentes:** `src/components/cobro/ArqueoScreen.jsx` y `src/components/cobro/TicketCierre.jsx`
+- **Objetivo:** Registrar el efectivo contado al finalizar la jornada, calcular las diferencias y generar el comprobante de cierre.
+- **Proceso esperado:** Comparar los importes registrados con el efectivo contado, guardar los resultados y presentar el resumen del cierre.
+
+### Consideraciones de integración
+- Utilizar `src/db/repositories.js` para acceder a los datos.
+- Mantener la lógica de cálculo de cambio en `src/utils/cambio.js`.
+- Integrar las funcionalidades con `src/pages/CajaPage.jsx` y el estado de sesión existente.
+- Verificar cada funcionalidad antes de marcar su ticket como terminado.
+
+**Estado:** La documentación describe el alcance esperado del módulo. La implementación y las pruebas deben confirmarse antes de declarar las funcionalidades como terminadas.
+
 Para mantener la rama `main` estable y limpia, **está strictly prohibido hacer commits directos a `main**`.
 
 ### Convención de Ramas:
