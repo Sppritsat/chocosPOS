@@ -108,35 +108,7 @@ chocopos/
 | --- | --- | --- | --- |
 | **Dev 1: José Emilio** | Core & Base de Datos | `src/db/**`, `src/store/**`, `src/hooks/**`, `src/App.jsx`, `src/main.jsx`, `src/components/common/**` | ✅ Dexie estable, repositorios, stores, PWA offline, layout base. |
 | **Dev 2: Jimena** | POS & Impresión | `src/pages/PosPage.jsx`, `src/components/pos/**`, `src/utils/printer/**` | Armado de bebidas, carrito de compras, etiquetas (simulada + Bluetooth). |
-
-
-## 💵 Módulo de Caja — Dev 3: Karlo
-
-Este módulo contempla las funcionalidades necesarias para administrar las operaciones de caja durante la jornada de trabajo de la chocolatería.
-
-### CHOCO-6: Apertura de caja
-- **Componente:** `src/components/cobro/AperturaCaja.jsx`
-- **Objetivo:** Registrar el fondo inicial de efectivo disponible al comenzar la jornada.
-- **Proceso esperado:** Capturar el monto inicial, registrar la apertura mediante `sesionesRepo.abrir()` y actualizar la sesión activa mediante `useSessionStore.cargarSesion()`.
-
-### CHOCO-7: Cobro y cálculo de cambio
-- **Componentes:** `src/components/cobro/CobroModal.jsx` y `src/utils/cambio.js`
-- **Objetivo:** Gestionar el cobro de los pedidos y calcular el cambio correspondiente.
-- **Proceso esperado:** Obtener el total de la compra, registrar el importe recibido y calcular el cambio cuando el pago sea en efectivo.
-
-### CHOCO-8: Arqueo y cierre de caja
-- **Componentes:** `src/components/cobro/ArqueoScreen.jsx` y `src/components/cobro/TicketCierre.jsx`
-- **Objetivo:** Registrar el efectivo contado al finalizar la jornada, calcular las diferencias y generar el comprobante de cierre.
-- **Proceso esperado:** Comparar los importes registrados con el efectivo contado, guardar los resultados y presentar el resumen del cierre.
-
-### Consideraciones de integración
-- Utilizar `src/db/repositories.js` para acceder a los datos.
-- Mantener la lógica de cálculo de cambio en `src/utils/cambio.js`.
-- Integrar las funcionalidades con `src/pages/CajaPage.jsx` y el estado de sesión existente.
-- Verificar cada funcionalidad antes de marcar su ticket como terminado.
-
-**Estado:** La documentación describe el alcance esperado del módulo. La implementación y las pruebas deben confirmarse antes de declarar las funcionalidades como terminadas.
-
+| **Dev 3: Karlo** | Cobro & Caja | `src/pages/CajaPage.jsx`, `src/components/cobro/**`, `src/utils/cambio.js` | Apertura de caja, cobro con cálculo de cambio, arqueo y ticket de cierre. |
 | **Dev 4: César** | Admin & Dashboard | `src/pages/AdminPage.jsx`, `src/components/admin/**`, `src/utils/stats.js` | Autenticación por PIN, CRUD de catálogo y dashboard de ventas diarias/cliente. |
 
 *Si necesitas modificar un archivo fuera de tu alcance asignado (esquema, store o repositorio), abre un issue o un Pull Request pequeño dirigido a José Emilio (Dev 1).*
