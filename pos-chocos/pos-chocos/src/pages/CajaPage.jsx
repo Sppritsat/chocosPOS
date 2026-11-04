@@ -1,9 +1,35 @@
+
+import { useState } from 'react'
 import AperturaCaja from '../components/cobro/AperturaCaja.jsx'
 import ArqueoScreen from '../components/cobro/ArqueoScreen.jsx'
+import TicketCierre from '../components/cobro/TicketCierre.jsx'
 import { useSesionActiva } from '../hooks/useSesionActiva.js'
 
-// DEV 3: apertura, arqueo y corte
 export default function CajaPage() {
   const sesion = useSesionActiva()
-  return sesion ? <ArqueoScreen sesion={sesion} /> : <AperturaCaja />
+  const [ticketCierre, setTicketCierre] = useState(null)
+
+  const mostrarTicket = (sesionCerrada) => {
+    setTicketCierre(sesionCerrada)
+  }
+
+  if (ticketCierre) {
+    return (
+      <TicketCierre
+        sesion={ticketCierre}
+        onContinuar={() => setTicketCierre(null)}
+      />
+    )
+  }
+
+  if (!sesion) {
+    return <AperturaCaja />
+  }
+
+  return (
+    <ArqueoScreen
+      sesion={sesion}
+      onCerrarCaja={mostrarTicket}
+    />
+  )
 }
