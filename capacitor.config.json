@@ -1,0 +1,8 @@
+{
+  "appId": "com.chocopos.app",
+  "appName": "ChocoPOS",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
