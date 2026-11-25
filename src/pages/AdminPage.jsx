@@ -2,6 +2,7 @@ import { useSessionStore } from '../store/useSessionStore.js'
 import PinGate from '../components/admin/PinGate.jsx'
 import CatalogManager from '../components/admin/CatalogManager.jsx'
 import SalesDashboard from '../components/admin/SalesDashboard.jsx'
+import CambiarPin from '../components/admin/CambiarPin.jsx'
 
 export default function AdminPage() {
   const ok = useSessionStore((s) => s.adminAutenticado)
@@ -10,6 +11,7 @@ export default function AdminPage() {
     <div className="grid gap-4">
       <CatalogManager />
       <SalesDashboard />
+      <CambiarPin />
     </div>
   )
 }

@@ -9,7 +9,7 @@ export default function CartPanel() {
   const [cobroAbierto, setCobroAbierto] = useState(false)
 
   return (
-    <aside className="flex max-h-[calc(100vh-7rem)] flex-col gap-4 rounded-2xl bg-cacao-950 p-6 text-marshmallow-50 shadow-warm md:sticky md:top-20">
+    <aside className="flex flex-col gap-3 sm:gap-4 rounded-2xl bg-cacao-950 p-4 sm:p-6 text-marshmallow-50 shadow-warm md:sticky md:top-20 md:max-h-[calc(100vh-7rem)]">
       <div>
         <p className="text-base text-marshmallow-50/60">Pedido de</p>
         <h2 className="font-display text-3xl">{cliente || 'un cliente'}</h2>
@@ -46,7 +46,7 @@ export default function CartPanel() {
       <div className="border-t border-marshmallow-50/15 pt-4">
         <div className="mb-4 flex items-baseline justify-between">
           <span className="text-lg text-marshmallow-50/60">Total</span>
-          <span className="font-display text-4xl">{moneda(total())}</span>
+          <span className="font-display text-3xl sm:text-4xl">{moneda(total())}</span>
         </div>
         <div className="flex flex-col gap-2">
           <PrintLabelButton />

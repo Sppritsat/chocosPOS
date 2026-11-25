@@ -165,3 +165,11 @@ El proyecto ya incluye `capacitor.config.json` y las dependencias (`@capacitor/c
 6. Cópialo a la tablet e instálalo (activa "Instalar apps de orígenes desconocidos" si Android lo pide).
 
 Para una versión firmada y lista para distribuir (no solo de prueba), Android Studio también permite generar un *Signed APK* desde ese mismo menú, pidiendo crear o usar un keystore.
+
+---
+
+## 🔧 Mejoras de usabilidad (celular + flujo de caja)
+
+- **Flujo de caja corregido:** antes, apenas abrías la caja la pantalla saltaba directo al arqueo (cierre de caja), que es justo lo contrario de lo que se necesita. Ahora, al abrir caja aparece una pantalla de confirmación con el fondo inicial y un botón grande **"Empezar a tomar pedidos"**, además de un botón aparte para **"Hacer arqueo y cerrar caja"** cuando de verdad toca cerrar.
+- **Cambiar PIN desde Admin:** nueva sección en el panel de administradora para cambiar el PIN de acceso (pide el PIN actual, el nuevo, y su confirmación).
+- **Interfaz responsiva para celular:** la app se diseñó pensando en tablet en horizontal, pero ahora se ve bien también en un celular en vertical — la navegación muestra solo íconos en pantallas angostas (los textos aparecen a partir de `sm`), los chips de tamaño/sabor/leche/toppings y los botones reducen su tamaño en pantallas chicas, y el panel de pedido ya no limita su altura cuando no está fijo a un costado (en celular se acomoda abajo del catálogo, sin cortar contenido).

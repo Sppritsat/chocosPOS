@@ -7,7 +7,7 @@ import { moneda } from '../../utils/format.js'
 const Opcion = ({ activo, onClick, children }) => (
   <button
     onClick={onClick}
-    className={`min-h-[56px] rounded-full border-2 px-5 py-3 text-lg font-medium transition
+    className={`min-h-[48px] sm:min-h-[56px] rounded-full border-2 px-4 sm:px-5 py-2 sm:py-3 text-base sm:text-lg font-medium transition
       ${activo
         ? 'border-cacao-950 bg-cacao-950 text-marshmallow-50'
         : 'border-canela-600/30 bg-marshmallow-surface text-cacao-950'}`}
@@ -121,8 +121,8 @@ export default function DrinkBuilder() {
   )
 
   return (
-    <section className="rounded-2xl bg-marshmallow-surface p-6 shadow-warmsm">
-      <h2 className="mb-6 font-display text-3xl text-cacao-950">Armar malteada</h2>
+    <section className="rounded-2xl bg-marshmallow-surface p-4 sm:p-6 shadow-warmsm">
+      <h2 className="mb-4 sm:mb-6 font-display text-2xl sm:text-3xl text-cacao-950">Armar malteada</h2>
 
       <Grupo titulo="Tamaño" opciones={tamanios} valor={tamanio} onPick={setTamanio} />
       <Grupo titulo="Sabor" opciones={sabores} valor={sabor} onPick={setSabor} />
